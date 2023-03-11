@@ -1,0 +1,10 @@
+rules:
+  comments:
+    level: error
+    require-starting-space: true
+    min-spaces-from-content: 2
+  document-start:
+    level: error
+    present: false
+  trailing-spaces:
+    level: error
