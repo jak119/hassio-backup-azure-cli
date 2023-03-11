@@ -6,9 +6,8 @@ ENV LANG C.UTF-8
 COPY requirements.txt /tmp/requirements.txt
 
 RUN \
-  apk update && \
-  apk add python3 bash py3-pip && \
-  apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev make cargo && \
+  apk add --no-cache python3 bash py3-pip rust && \
+  apk add --no-cache --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev make cargo && \
   pip3 --no-cache-dir install -r /tmp/requirements.txt && \
   apk del --purge build
 
