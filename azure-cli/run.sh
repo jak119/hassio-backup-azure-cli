@@ -14,7 +14,7 @@ fi
 
 bashio::log.info "=== Starting copy ==="
 # az storage blob upload-batch --connection-string "$(bashio::config 'connectionstring')" -d $CONTAINER -s /backup/ --no-progress $params
-az storage blob upload-batch --connection-string "$(bashio::config 'connectionstring')" -d $CONTAINER -s /backup/ --no-progress
+az storage blob upload-batch --connection-string "$(bashio::config 'connectionstring')" -d "$CONTAINER" -s /backup/ --no-progress
 
 bashio::log.info "=== Finished copy ==="
 bashio::exit.ok
