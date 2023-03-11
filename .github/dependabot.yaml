@@ -5,3 +5,8 @@ updates:
     schedule:
       interval: daily
       time: "06:00"
+  - package-ecosystem: "pip"
+    directory: "azure-cli"
+    schedule:
+      interval: daily
+      time: "06:00"
